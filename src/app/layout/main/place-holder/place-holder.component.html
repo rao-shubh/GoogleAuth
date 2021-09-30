@@ -1,0 +1,19 @@
+<h3>place-holder Starts!</h3>
+<p>{{greetUser()}}</p>
+<p>Just number calculations : {{2+2}}</p>
+<p>Site URL : {{siteUrl}}</p>
+<br/>
+<h4>Property Binding</h4>
+<ul>
+    <li>Attributes and Properties are not the same</li>
+    <li>Attribute - HTML</li>
+    <li>Properties - DOM (Document Object Model)</li>
+    <li>Attribute initialize DOM and are done. Once initialized: cannot be changed</li>
+    <li>Properties can however change</li>
+</ul>
+<input [id]="myId" type="text" value="Name">
+<!-- below is not disabled -->
+<input disabled="false" id="{{myId}}" type="text" value="Firstname">
+<!-- below is disabled -->
+<input [disabled]=isDisbaled id="{{myId}}" type="text" value="Lastname">
+<h3>place-holder Ends!</h3>
