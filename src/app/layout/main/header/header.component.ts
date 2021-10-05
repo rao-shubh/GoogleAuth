@@ -14,7 +14,13 @@ import { Component, OnInit } from '@angular/core';
   }
   .title-format {
     font-style: italic;
-  }`]
+  }
+  h2 {
+    background-color: rgb(118, 181, 192);
+    padding: 20px;
+    margin: 0;
+  }
+  `]
 })
 export class HeaderComponent implements OnInit {
 
