@@ -8,7 +8,7 @@ import { AdminComponent } from './admin/admin.component';
 })
 export class AppComponent {
   title = 'LearningApp';
-  constructor(private vcr: ViewContainerRef,
+  /* constructor(private vcr: ViewContainerRef,
     private cfr: ComponentFactoryResolver) {}
 
     async loadAdmin() {
@@ -25,5 +25,5 @@ export class AppComponent {
       this.vcr.createComponent(
         this.cfr.resolveComponentFactory(UserComponent)
       )
-    }
+    } */
 }

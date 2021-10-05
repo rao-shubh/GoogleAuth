@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vcr: ViewContainerRef,
+    private cfr: ComponentFactoryResolver) {}
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
+
+    async loadAdmin() {
+      this.vcr.clear();
+      const {AdminComponent} = await import('../admin/admin.component');
+      this.vcr.createComponent(
+        this.cfr.resolveComponentFactory(AdminComponent)
+      )
+    }
+
+    async loadUser() {
+      this.vcr.clear();
+      const {UserComponent} = await import('../user/user.component');
+      this.vcr.createComponent(
+        this.cfr.resolveComponentFactory(UserComponent)
+      )
+    }
 
 }
