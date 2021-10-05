@@ -16,4 +16,7 @@
 <input disabled="false" id="{{myId}}" type="text" value="Firstname">
 <!-- below is disabled -->
 <input [disabled]=isDisbaled id="{{myId}}" type="text" value="Lastname">
+<br/>
+<button (click)="onClick($event)">Greet</button>
+<p>{{greetMsg}}</p>
 <h3>place-holder Ends!</h3>

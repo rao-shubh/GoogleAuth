@@ -11,6 +11,7 @@ export class PlaceHolderComponent implements OnInit {
   public siteUrl = window.location.href;
   public myId = 'testId';
   public isDisbaled = false;
+  public greetMsg = '';
   constructor() { }
 
   ngOnInit(): void {
@@ -18,6 +19,12 @@ export class PlaceHolderComponent implements OnInit {
 
   greetUser() {
     return "Hello " + this.user;
+  }
+
+  onClick(event: any): void {
+    alert("This is greet event");
+    console.log("Event:", event);
+    this.greetMsg = "Welcome to this page";
   }
 
 }
