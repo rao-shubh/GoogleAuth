@@ -39,7 +39,8 @@ export class CourseDetailsComponent implements OnInit {
 
   gotoCourseList() {
     let selectedId = this.courseId ? this.courseId : null;
-    this.router.navigate(['/course-list', {id: selectedId}]);
+    this.router.navigate(['/course-list', {id: selectedId, testvalue: "testvalue1"}]);
+    // this.router.navigate(['../'], {relativeTo: this.route});
   }
 
 }
