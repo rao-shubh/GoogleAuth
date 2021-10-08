@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Employee } from '../interfaces/http-data';
 
 @Injectable({
@@ -18,5 +19,16 @@ export class HttpService {
 
   getEmployeePromise(): Promise<Employee[]> {
     return this.http.get<Employee[]>(this._url).toPromise();
+  }
+  getEmployeeErr(): any {
+    return this.http.get<Employee[]>(this._url).pipe(catchError(this.handleError));
+  }
+
+  getEmployeePromiseErr():any {
+    return this.http.get<Employee[]>(this._url).pipe(catchError(this.handleError)).toPromise();
+  }
+
+  handleError(error: HttpErrorResponse): any {
+    return throwError(error);
   }
 }

@@ -30,4 +30,17 @@ export class EmployeeListComponent implements OnInit {
     });
   }
 
+  getEmployeeDetailsObservableErr() {
+    this.httpService.getEmployee().subscribe(data => {
+      this.employees = data;
+    },
+    error => console.log('Error', error.statusText));
+  }
+
+  getEmployeeDetailsPromiseErr() {
+    this.httpService.getEmployeePromise().then(data => {
+      this.employeeDetails = data;
+    },
+    error => console.log('Error', error.statusText));
+  }
 }
