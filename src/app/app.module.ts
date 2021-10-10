@@ -11,6 +11,9 @@ import { HeaderComponent } from './layout/main/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContentHolderComponent } from './layout/main/content-holder/content-holder.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ViewChildExComponent } from './view-child-ex/view-child-ex.component';
+import { FormsModule } from '@angular/forms';
+import { ChildComponent } from './view-child-ex/child/child.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ContentHolderComponent,
     routingModules,
     DashboardComponent,
+    ViewChildExComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

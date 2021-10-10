@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PlaceHolderComponent } from './place-holder/place-holder.component';
+import { ViewChildExComponent } from './view-child-ex/view-child-ex.component';
 
 const routes: Routes = [
   /* {path: 'admin', loadChildren:() => import('./admin/admin.module')
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'place-holder', component: PlaceHolderComponent},
   {path: 'course-list', component: CourseListComponent},
   {path: 'course/:id', component: CourseDetailsComponent},
+  {path: 'view-child', component: ViewChildExComponent},
   { path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full'
