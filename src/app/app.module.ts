@@ -12,8 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContentHolderComponent } from './layout/main/content-holder/content-holder.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ViewChildExComponent } from './view-child-ex/view-child-ex.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChildComponent } from './view-child-ex/child/child.component';
+import { TemplateDrivenForm1Component } from './template-driven-form1/template-driven-form1.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,15 @@ import { ChildComponent } from './view-child-ex/child/child.component';
     DashboardComponent,
     ViewChildExComponent,
     ChildComponent,
+    TemplateDrivenForm1Component,
+    ReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
