@@ -1,5 +1,4 @@
-import { Component, ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
-import { AdminComponent } from './admin/admin.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,5 @@ import { AdminComponent } from './admin/admin.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'LearningApp';
+  title = 'GoogleLogin';
 }
