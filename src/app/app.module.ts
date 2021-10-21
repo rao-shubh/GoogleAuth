@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { GoogleLoginProvider } from 'angularx-social-login';
+import { GoogleLoginProvider, SocialLoginModule } from 'angularx-social-login';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { GoogleLoginService } from './google-login.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, LoginComponent, DashboardComponent],
+  imports: [BrowserModule, AppRoutingModule, SocialLoginModule],
   providers: [
     {
       provide: 'SocialAuthServiceConfig',
