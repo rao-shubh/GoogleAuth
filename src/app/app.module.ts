@@ -31,7 +31,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '181002872079-78tf2kthnoplnlj133af7jgb3ba44top.apps.googleusercontent.com'
+              '181002872079-78tf2kthn****************jgb3ba44top.apps.googleusercontent.com'
             ),
           },
         ],
