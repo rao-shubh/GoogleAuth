@@ -1,1 +1,5 @@
-<p>dashboard works!</p>
+<div *ngIf="socialAuthServive.authState | async as socialUser">
+    <p>Hello, {{socialUser.name}}!</p>
+    <p>Your email: {{socialUser.email}}</p>
+    <button (click)="logout()">Logout</button>
+  </div>
